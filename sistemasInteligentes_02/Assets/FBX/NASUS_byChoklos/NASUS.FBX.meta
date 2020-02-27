@@ -1,0 +1,560 @@
+fileFormatVersion: 2
+guid: d9462c7ec6f53b64296096467e0ac854
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bala1
+    100002: Bala2
+    100004: Bala3
+    100006: Bala4
+    100008: Bala5
+    100010: Bala6
+    100012: Bala7
+    100014: Brazoderecho
+    100016: Brazoizquierdo
+    100018: Cilindrohidraulico
+    100020: Cilindrohidraulico 1
+    100022: Cubohidraulico1
+    100024: Cubohidraulico1 1
+    100026: INFERIOR
+    100028: Minigun
+    100030: Minigun 1
+    100032: //RootNode
+    100034: pCube1
+    100036: pCube1 1
+    100038: pCube10
+    100040: pCube10 1
+    100042: pCube11
+    100044: pCube12
+    100046: pCube13
+    100048: pCube14
+    100050: pCube15
+    100052: pCube2
+    100054: pCube2 1
+    100056: pCube4
+    100058: pCube4 1
+    100060: pCube5
+    100062: pCube5 1
+    100064: pCube6
+    100066: pCube6 1
+    100068: pCube7
+    100070: pCube8
+    100072: pCube9
+    100074: pCylinder1
+    100076: pCylinder1 1
+    100078: pCylinder10
+    100080: pCylinder10 1
+    100082: pCylinder11
+    100084: pCylinder11 1
+    100086: pCylinder12
+    100088: pCylinder12 1
+    100090: pCylinder13
+    100092: pCylinder13 1
+    100094: pCylinder14
+    100096: pCylinder14 1
+    100098: pCylinder15
+    100100: pCylinder15 1
+    100102: pCylinder16
+    100104: pCylinder16 1
+    100106: pCylinder17
+    100108: pCylinder18
+    100110: pCylinder19
+    100112: pCylinder2
+    100114: pCylinder2 1
+    100116: pCylinder20
+    100118: pCylinder3
+    100120: pCylinder3 1
+    100122: pCylinder4
+    100124: pCylinder4 1
+    100126: pCylinder5
+    100128: pCylinder5 1
+    100130: pCylinder6
+    100132: pCylinder6 1
+    100134: pCylinder8
+    100136: pCylinder8 1
+    100138: pCylinder9
+    100140: pCylinder9 1
+    100142: PECHO
+    100144: PECHO_INFERIOR
+    100146: PECHOSUPERIOR
+    100148: PIE_DERECHO
+    100150: PIE_DERECHO 1
+    100152: PIE_IZQUIERDO
+    100154: PIE_IZQUIERDO 1
+    100156: Piederecho
+    100158: Piederecho 1
+    100160: Piernaderecha
+    100162: PIERNADERSUPERIORSINTALON
+    100164: PIERNAIZQSUPERIORSINTALON
+    100166: PIERNAIZQUIERDASUPERIOR
+    100168: pSphere1
+    100170: Robot
+    100172: Rodilladerecha
+    100174: Rodilladerecha 1
+    100176: SUPERIOR
+    100178: TALON
+    100180: TALONIZQ
+    100182: Tanque_de_combustible
+    100184: Tanque_de_energia
+    100186: Torso
+    100188: TUBOSQUEGIRANALDISPARARDER
+    100190: TUBOSQUEGIRANALDISPARARIZQ
+    100192: Ventilador
+    400000: Bala1
+    400002: Bala2
+    400004: Bala3
+    400006: Bala4
+    400008: Bala5
+    400010: Bala6
+    400012: Bala7
+    400014: Brazoderecho
+    400016: Brazoizquierdo
+    400018: Cilindrohidraulico
+    400020: Cilindrohidraulico 1
+    400022: Cubohidraulico1
+    400024: Cubohidraulico1 1
+    400026: INFERIOR
+    400028: Minigun
+    400030: Minigun 1
+    400032: //RootNode
+    400034: pCube1
+    400036: pCube1 1
+    400038: pCube10
+    400040: pCube10 1
+    400042: pCube11
+    400044: pCube12
+    400046: pCube13
+    400048: pCube14
+    400050: pCube15
+    400052: pCube2
+    400054: pCube2 1
+    400056: pCube4
+    400058: pCube4 1
+    400060: pCube5
+    400062: pCube5 1
+    400064: pCube6
+    400066: pCube6 1
+    400068: pCube7
+    400070: pCube8
+    400072: pCube9
+    400074: pCylinder1
+    400076: pCylinder1 1
+    400078: pCylinder10
+    400080: pCylinder10 1
+    400082: pCylinder11
+    400084: pCylinder11 1
+    400086: pCylinder12
+    400088: pCylinder12 1
+    400090: pCylinder13
+    400092: pCylinder13 1
+    400094: pCylinder14
+    400096: pCylinder14 1
+    400098: pCylinder15
+    400100: pCylinder15 1
+    400102: pCylinder16
+    400104: pCylinder16 1
+    400106: pCylinder17
+    400108: pCylinder18
+    400110: pCylinder19
+    400112: pCylinder2
+    400114: pCylinder2 1
+    400116: pCylinder20
+    400118: pCylinder3
+    400120: pCylinder3 1
+    400122: pCylinder4
+    400124: pCylinder4 1
+    400126: pCylinder5
+    400128: pCylinder5 1
+    400130: pCylinder6
+    400132: pCylinder6 1
+    400134: pCylinder8
+    400136: pCylinder8 1
+    400138: pCylinder9
+    400140: pCylinder9 1
+    400142: PECHO
+    400144: PECHO_INFERIOR
+    400146: PECHOSUPERIOR
+    400148: PIE_DERECHO
+    400150: PIE_DERECHO 1
+    400152: PIE_IZQUIERDO
+    400154: PIE_IZQUIERDO 1
+    400156: Piederecho
+    400158: Piederecho 1
+    400160: Piernaderecha
+    400162: PIERNADERSUPERIORSINTALON
+    400164: PIERNAIZQSUPERIORSINTALON
+    400166: PIERNAIZQUIERDASUPERIOR
+    400168: pSphere1
+    400170: Robot
+    400172: Rodilladerecha
+    400174: Rodilladerecha 1
+    400176: SUPERIOR
+    400178: TALON
+    400180: TALONIZQ
+    400182: Tanque_de_combustible
+    400184: Tanque_de_energia
+    400186: Torso
+    400188: TUBOSQUEGIRANALDISPARARDER
+    400190: TUBOSQUEGIRANALDISPARARIZQ
+    400192: Ventilador
+    2300000: Bala1
+    2300002: Bala2
+    2300004: Bala3
+    2300006: Bala4
+    2300008: Bala5
+    2300010: Bala6
+    2300012: Bala7
+    2300014: Cilindrohidraulico
+    2300016: Cilindrohidraulico 1
+    2300018: Cubohidraulico1
+    2300020: Cubohidraulico1 1
+    2300022: pCube1
+    2300024: pCube1 1
+    2300026: pCube10
+    2300028: pCube10 1
+    2300030: pCube11
+    2300032: pCube12
+    2300034: pCube13
+    2300036: pCube14
+    2300038: pCube15
+    2300040: pCube2
+    2300042: pCube2 1
+    2300044: pCube4
+    2300046: pCube4 1
+    2300048: pCube5
+    2300050: pCube5 1
+    2300052: pCube6
+    2300054: pCube6 1
+    2300056: pCube7
+    2300058: pCube8
+    2300060: pCube9
+    2300062: pCylinder1
+    2300064: pCylinder1 1
+    2300066: pCylinder10
+    2300068: pCylinder10 1
+    2300070: pCylinder11
+    2300072: pCylinder11 1
+    2300074: pCylinder12
+    2300076: pCylinder12 1
+    2300078: pCylinder13
+    2300080: pCylinder13 1
+    2300082: pCylinder14
+    2300084: pCylinder14 1
+    2300086: pCylinder15
+    2300088: pCylinder15 1
+    2300090: pCylinder16
+    2300092: pCylinder16 1
+    2300094: pCylinder17
+    2300096: pCylinder18
+    2300098: pCylinder19
+    2300100: pCylinder2
+    2300102: pCylinder2 1
+    2300104: pCylinder20
+    2300106: pCylinder3
+    2300108: pCylinder3 1
+    2300110: pCylinder4
+    2300112: pCylinder4 1
+    2300114: pCylinder5
+    2300116: pCylinder5 1
+    2300118: pCylinder6
+    2300120: pCylinder6 1
+    2300122: pCylinder8
+    2300124: pCylinder8 1
+    2300126: pCylinder9
+    2300128: pCylinder9 1
+    2300130: Piederecho
+    2300132: Piederecho 1
+    2300134: pSphere1
+    2300136: Rodilladerecha
+    2300138: Rodilladerecha 1
+    2300140: Tanque_de_combustible
+    2300142: Tanque_de_energia
+    2300144: Torso
+    2300146: Ventilador
+    3300000: Bala1
+    3300002: Bala2
+    3300004: Bala3
+    3300006: Bala4
+    3300008: Bala5
+    3300010: Bala6
+    3300012: Bala7
+    3300014: Cilindrohidraulico
+    3300016: Cilindrohidraulico 1
+    3300018: Cubohidraulico1
+    3300020: Cubohidraulico1 1
+    3300022: pCube1
+    3300024: pCube1 1
+    3300026: pCube10
+    3300028: pCube10 1
+    3300030: pCube11
+    3300032: pCube12
+    3300034: pCube13
+    3300036: pCube14
+    3300038: pCube15
+    3300040: pCube2
+    3300042: pCube2 1
+    3300044: pCube4
+    3300046: pCube4 1
+    3300048: pCube5
+    3300050: pCube5 1
+    3300052: pCube6
+    3300054: pCube6 1
+    3300056: pCube7
+    3300058: pCube8
+    3300060: pCube9
+    3300062: pCylinder1
+    3300064: pCylinder1 1
+    3300066: pCylinder10
+    3300068: pCylinder10 1
+    3300070: pCylinder11
+    3300072: pCylinder11 1
+    3300074: pCylinder12
+    3300076: pCylinder12 1
+    3300078: pCylinder13
+    3300080: pCylinder13 1
+    3300082: pCylinder14
+    3300084: pCylinder14 1
+    3300086: pCylinder15
+    3300088: pCylinder15 1
+    3300090: pCylinder16
+    3300092: pCylinder16 1
+    3300094: pCylinder17
+    3300096: pCylinder18
+    3300098: pCylinder19
+    3300100: pCylinder2
+    3300102: pCylinder2 1
+    3300104: pCylinder20
+    3300106: pCylinder3
+    3300108: pCylinder3 1
+    3300110: pCylinder4
+    3300112: pCylinder4 1
+    3300114: pCylinder5
+    3300116: pCylinder5 1
+    3300118: pCylinder6
+    3300120: pCylinder6 1
+    3300122: pCylinder8
+    3300124: pCylinder8 1
+    3300126: pCylinder9
+    3300128: pCylinder9 1
+    3300130: Piederecho
+    3300132: Piederecho 1
+    3300134: pSphere1
+    3300136: Rodilladerecha
+    3300138: Rodilladerecha 1
+    3300140: Tanque_de_combustible
+    3300142: Tanque_de_energia
+    3300144: Torso
+    3300146: Ventilador
+    4300000: pCube11
+    4300002: pCube12
+    4300004: pCube13
+    4300006: pCube9
+    4300008: Torso
+    4300010: Tanque_de_energia
+    4300012: Ventilador
+    4300014: Tanque_de_combustible
+    4300016: pCube8
+    4300018: pCube7
+    4300020: pCylinder17
+    4300022: pCylinder16
+    4300024: pCylinder15
+    4300026: pCylinder9
+    4300028: pCylinder14
+    4300030: pCylinder10
+    4300032: pCylinder11
+    4300034: pCylinder12
+    4300036: pCylinder13
+    4300038: pCylinder8
+    4300040: pCube10
+    4300042: pCylinder16
+    4300044: pCylinder15
+    4300046: pCylinder9
+    4300048: pCylinder14
+    4300050: pSphere1
+    4300052: pCylinder20
+    4300054: pCube14
+    4300056: Bala1
+    4300058: Bala2
+    4300060: Bala3
+    4300062: Bala4
+    4300064: Bala5
+    4300066: Bala6
+    4300068: Bala7
+    4300070: pCylinder13
+    4300072: pCylinder12
+    4300074: pCylinder11
+    4300076: pCylinder10
+    4300078: pCylinder19
+    4300080: pCylinder18
+    4300082: pCylinder8
+    4300084: pCube10
+    4300086: pCube15
+    4300088: pCylinder1
+    4300090: pCylinder2
+    4300092: pCylinder3
+    4300094: pCylinder4
+    4300096: pCylinder5
+    4300098: pCylinder6
+    4300100: pCube6
+    4300102: pCube5
+    4300104: Rodilladerecha
+    4300106: pCube4
+    4300108: pCube2
+    4300110: pCube1
+    4300112: Piederecho
+    4300114: Cubohidraulico1
+    4300116: Cilindrohidraulico
+    4300118: Rodilladerecha
+    4300120: pCylinder1
+    4300122: pCylinder2
+    4300124: pCylinder3
+    4300126: pCylinder4
+    4300128: pCylinder5
+    4300130: pCylinder6
+    4300132: pCube6
+    4300134: pCube5
+    4300136: pCube1
+    4300138: pCube2
+    4300140: pCube4
+    4300142: Piederecho
+    4300144: Cubohidraulico1
+    4300146: Cilindrohidraulico
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bala
+    second: {fileID: 2100000, guid: dd017a20ce19a7d42beb1631b46516f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blacklightermetal
+    second: {fileID: 2100000, guid: 90c0b1cfa64d9ca4390428bc62a2d6ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cascocoloramarillo
+    second: {fileID: 2100000, guid: 4f423d432d4f3e24592d92acf4694007, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 3c0dc9a199a2ce142962a442fafa9a58, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Negro
+    second: {fileID: 2100000, guid: 3e9fe4973a7a1a34aa671c97e5fa5657, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: O
+    second: {fileID: 2100000, guid: 7010f4a1d6a612441aede7e38d035028, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rojo
+    second: {fileID: 2100000, guid: 6290c6fc6f7ad3d44be80485492ffd04, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blinn10
+    second: {fileID: 2100000, guid: 11c3bf20974238c41914b4f9d6dcf3ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blinn5
+    second: {fileID: 2100000, guid: 88495abe0ccdbdf408a8a055346a152d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blinn6
+    second: {fileID: 2100000, guid: 7010f4a1d6a612441aede7e38d035028, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: d97d42057ed82f74c84fbd0660d852df, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 0
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
