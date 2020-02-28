@@ -221,7 +221,7 @@ Prefab:
     - target: {fileID: 114394749537120772, guid: 5fa8e226aa222b74e91c48075b736666,
         type: 2}
       propertyPath: mapFile
-      value: map02.txt
+      value: mapAbel.txt
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fa8e226aa222b74e91c48075b736666, type: 2}

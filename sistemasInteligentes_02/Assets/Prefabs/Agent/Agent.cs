@@ -19,7 +19,9 @@ public class Agent : MonoBehaviour {
 		
 	}
 
-	void destroy(){
+	void destroy(bool success){
+		if (success)Debug.Log ("Target found");
+		else Debug.Log ("Target not found, time exceeded");
 		GameObject.Destroy (gameObject.transform.GetChild (1).gameObject);
 		transform.DetachChildren ();
 		GameObject.Destroy (this.gameObject);
@@ -27,7 +29,7 @@ public class Agent : MonoBehaviour {
 
 	void checkAdjacent(){
 		timeToLive--;
-		if (timeToLive < 0) destroy ();
+		if (timeToLive < 0) destroy (false);
 		int myX = Mathf.RoundToInt(this.gameObject.transform.position.x), myZ = Mathf.RoundToInt(this.gameObject.transform.position.z);
 
 		bool
@@ -44,14 +46,53 @@ public class Agent : MonoBehaviour {
 		//AQUI VA LA PARTE DE PROGRAMAR EL COMPORTAMIENTO
 		//==========================================================
 
-		if (up) {
+		if (!up && !left && !down && !right) {
+			timeToLive = 0;
+		} else if (
+			(up && !right && !down) ||
+			(up && up_left && left && down_left && down && (
+				(down_right && !up_right) ||
+				(!right && !down_right)
+			))
+		) {
 			this.transform.Translate (Vector3.forward);
-		} else if (left) {
+		} else if (
+			(left && !up && !right) ||
+			(left && down_left && down && down_right && right &&(
+				(up_right && !up_left) ||
+				(!up_right && !up)
+			))
+		) {
 			this.transform.Translate (Vector3.left);
-		} else if (down) {
+		} else if (
+			(down && !up && !left) ||
+			(up && up_right && right && down_right && down &&(
+				(up_left && !down_left)||
+				(!up_left && !left)
+			))
+		) {
 			this.transform.Translate (Vector3.back);
-		} else if (right) {
+		} else if (
+			(right && !down && !left) ||
+			(left && up_left && up && up_right && right &&(
+				(down_left && !down_right) ||
+				(!down_left && !down)
+			))
+		) {
 			this.transform.Translate (Vector3.right);
+		} else {
+			if (up) {
+				this.transform.Translate (Vector3.forward);
+			} else if (left) {
+				this.transform.Translate (Vector3.left);
+			} else if (down) {
+				this.transform.Translate (Vector3.back);
+			} else if (right) {
+				this.transform.Translate (Vector3.right);
+			}
 		}
+	}
+	void OnTriggerEnter(Collider other){
+		destroy (true);
 	}
 }

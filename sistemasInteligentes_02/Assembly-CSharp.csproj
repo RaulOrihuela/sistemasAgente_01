@@ -59,6 +59,7 @@
      <Compile Include="Assets\Prefabs\Tile\Tile.cs" />
      <None Include="Assets\MapFiles\map02.txt" />
      <None Include="Assets\MapFiles\map01.txt" />
+     <None Include="Assets\MapFiles\mapAbel.txt" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Raul Orihuela/Documents/Tareas/ITC/Semestre8/SistemasInteligentes/unitySimpleAgent/sistemasInteligentes_02/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

@@ -54,4 +54,5 @@ MonoBehaviour:
   mapPrefab: {fileID: 1315524869233086, guid: c7b116c8914b3fa42bb4d07f107a6c5d, type: 2}
   agentPrefab: {fileID: 1968979803508360, guid: 5ec0fbf0385eeb545959d0cb3f744b32,
     type: 2}
-  mapFile: map01.txt
+  goalPrefab: {fileID: 1914505998993764, guid: 6f464b38b9eeb334ba86b3fadd25923a, type: 2}
+  mapFile: map02.txt

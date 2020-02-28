@@ -7,6 +7,7 @@ public class SetupManager : MonoBehaviour {
 	public static SetupManager instance;
 	public GameObject mapPrefab;
 	public GameObject agentPrefab;
+	public GameObject goalPrefab;
 	public string mapFile;
 
 	void Awake(){
@@ -16,7 +17,8 @@ public class SetupManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//READ Agent's INITIAL POSITION
-		int[] coordinates = agentCoordinates ("Assets/MapFiles/" + mapFile);
+		int[] coordinates = readCoordinates ("Assets/MapFiles/" + mapFile, "A", "a"), 
+		goalCoordinates = readCoordinates("Assets/MapFiles/" + mapFile, "X", "x");
 
 		//CREATE Map AND LOAD
 		GameObject map = Instantiate (mapPrefab) as GameObject;
@@ -29,6 +31,9 @@ public class SetupManager : MonoBehaviour {
 		agent.transform.SetParent (this.transform);
 		agent.GetComponent<Agent> ().map = mapScript;
 
+		//CREATE GOAL
+		GameObject goal = Instantiate(goalPrefab, new Vector3 (goalCoordinates[0],0,goalCoordinates[1]), gameObject.transform.rotation) as GameObject; 
+		goal.transform.SetParent (this.transform);
 	}
 	
 	// Update is called once per frame
@@ -36,7 +41,7 @@ public class SetupManager : MonoBehaviour {
 		
 	}
 
-	int [] agentCoordinates (string path){
+	int [] readCoordinates (string path, string patternA, string patternB){
 		int [] coordinates = new int[2];
 		//DEFAULT VALUES
 		coordinates [0] = 1;
@@ -48,10 +53,10 @@ public class SetupManager : MonoBehaviour {
 			string line = reader.ReadLine ();
 			matrixHeight++;
 			//SEARCH FOR 'A' or 'a'
-			if (line.Contains ("A") || line.Contains ("a"))		 {
+			if (line.Contains (patternA) || line.Contains (patternB))		 {
 				//SEARCH FOR 'A' or 'a'
-				int tempColumn = line.IndexOf ("A") + 1;
-				if (tempColumn == -1) tempColumn = line.IndexOf ("a") + 1;
+				int tempColumn = line.IndexOf (patternA) + 1;
+				if (tempColumn == -1) tempColumn = line.IndexOf (patternB) + 1;
 				//SET COORDINATE VALUES
 				coordinates [0] = matrixHeight;
 				coordinates [1] = tempColumn;
