@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
+public enum heuristicBake {Euclidean, Manhattan};
 public class Map : MonoBehaviour {
 	public GameObject tilePrefab;
+
+	[SerializeField]
 	MapBitMatrix matrix;
 
 	// Use this for initialization
@@ -88,6 +91,44 @@ public class Map : MonoBehaviour {
 		}
 	}
 
+	public void bakeHeuristics(heuristicBake heuristic){
+		int matrixLength = matrix.getMaxRowLength();
+		int matrixHeight = matrix.rows.Length;
+		HeuristicCalculator heuristicCalc = HeuristicCalculator.getInstance ();
+
+		float maxVal = heuristicCalc.getManhattanDistance (0, 0, matrixHeight/2, matrixLength/2);
+
+		for (int row = 0; row < matrixHeight; row++) {
+			for (int col = 0; col < matrixLength; col++) {
+				matrix.heuristicRows [row].columns [col] = 1 - heuristicCalc.getManhattanDistance (row, col, matrixHeight/2, matrixLength/2) / maxVal;
+			}
+		}
+	}
+
+	public float getHeuristics(float xPos, float zPos, float xTarget, float zTarget){
+		HeuristicCalculator heuristicCalc = HeuristicCalculator.getInstance ();
+		return heuristicCalc.getManhattanDistance (xPos, zPos, xTarget, zTarget) + matrix.heuristicRows [Mathf.FloorToInt(xPos)].columns [Mathf.FloorToInt(zPos)];
+	}
+
+	[System.Serializable]
+	public class HeuristicCalculator{
+		public static HeuristicCalculator instance;
+		public static HeuristicCalculator getInstance(){
+			if (instance == null) instance = new HeuristicCalculator ();
+			return instance;
+		}
+		private HeuristicCalculator(){}
+
+		public float getManhattanDistance(float xPos, float zPos, float xTarget, float zTarget){
+			return Mathf.Abs (xPos - xTarget) + Mathf.Abs (zPos - zTarget);
+		}
+
+		public float getEuclidianDistance(float xPos, float zPos, float xTarget, float zTarget){
+			return Mathf.Sqrt ((xPos - xTarget) * (xPos - xTarget) + (zPos - zTarget) * (zPos - zTarget));
+		}
+	}
+
+
 	[System.Serializable]
 	public class MapBitRow{
 		public bool [] columns;
@@ -95,9 +136,16 @@ public class Map : MonoBehaviour {
 			return this.columns.Length;
 		}
 	}
+
+	[System.Serializable]
+	public class MapHeuristicRow{
+		public float [] columns;
+	}
+
 	[System.Serializable]
 	public class MapBitMatrix{
 		public MapBitRow [] rows;
+		public MapHeuristicRow[] heuristicRows;
 
 		public MapBitMatrix(string path){
 
@@ -145,7 +193,7 @@ public class Map : MonoBehaviour {
 			normalize ();
 		}
 
-		int getMaxRowLength(){
+		public int getMaxRowLength(){
 			int temp = 0;
 			for (int currentRow = 0; currentRow < this.rows.Length; currentRow++) {
 				MapBitRow row = this.rows [currentRow];
@@ -157,7 +205,15 @@ public class Map : MonoBehaviour {
 			int matrixLength = this.getMaxRowLength();
 			int matrixHeight = this.rows.Length;
 			MapBitRow [] newRows = new MapBitRow[matrixHeight + 2];
-			for (int row = 0; row < matrixHeight + 2; row++) newRows [row] = new MapBitRow ();
+			this.heuristicRows = new MapHeuristicRow[matrixHeight + 2];
+			for (int row = 0; row < matrixHeight + 2; row++) {
+				newRows [row] = new MapBitRow ();
+				heuristicRows [row] = new MapHeuristicRow ();
+
+				float [] tempValues = new float[matrixLength + 2];
+				for (int x = 0; x < matrixLength + 2; x++) tempValues [x] = 0.0f;
+				heuristicRows [row].columns = tempValues;
+			}
 			
 			//==========================================================
 			//CREATE EACH ROW

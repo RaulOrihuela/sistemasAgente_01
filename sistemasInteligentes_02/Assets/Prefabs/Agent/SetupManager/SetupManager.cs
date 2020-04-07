@@ -17,14 +17,14 @@ public class SetupManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//READ Agent's INITIAL POSITION
-		int[] coordinates = readCoordinates ("Assets/MapFiles/" + mapFile, "A", "a"), 
-		goalCoordinates = readCoordinates("Assets/MapFiles/" + mapFile, "X", "x");
+		int[] coordinates = readCoordinates ("Assets/Prefabs/General/MapFiles/" + mapFile, "A", "a"), 
+		goalCoordinates = readCoordinates("Assets/Prefabs/General/MapFiles/" + mapFile, "X", "x");
 
 		//CREATE Map AND LOAD
 		GameObject map = Instantiate (mapPrefab) as GameObject;
 		map.transform.SetParent (this.transform);
 		Map mapScript = map.GetComponent<Map> ();
-		mapScript.setup ("Assets/MapFiles/" + mapFile);
+		mapScript.setup ("Assets/Prefabs/General/MapFiles/" + mapFile);
 
 		//CREATE Agent AND GIVE Map REFERENCE
 		GameObject agent = Instantiate(agentPrefab, new Vector3 (coordinates[0],0,coordinates[1]), gameObject.transform.rotation) as GameObject; 

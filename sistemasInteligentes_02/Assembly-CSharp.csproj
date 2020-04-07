@@ -53,13 +53,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Prefabs\Agent\Agent.cs" />
-     <Compile Include="Assets\Prefabs\Map\Map.cs" />
-     <Compile Include="Assets\Prefabs\SetupManager\SetupManager.cs" />
-     <Compile Include="Assets\Prefabs\Tile\Tile.cs" />
-     <None Include="Assets\MapFiles\map02.txt" />
-     <None Include="Assets\MapFiles\map01.txt" />
-     <None Include="Assets\MapFiles\mapAbel.txt" />
+     <Compile Include="Assets\Prefabs\Agent\Agent\Agent.cs" />
+     <Compile Include="Assets\Prefabs\Agent\SetupManager\SetupManager.cs" />
+     <Compile Include="Assets\Prefabs\General\Map\Map.cs" />
+     <Compile Include="Assets\Prefabs\General\Tile\Tile.cs" />
+     <Compile Include="Assets\Prefabs\Minimax\GameManager_Minimax\GameManager_Minimax.cs" />
+     <Compile Include="Assets\Prefabs\Minimax\Player_Minimax\Player_Minimax.cs" />
+     <None Include="Assets\Prefabs\General\MapFiles\map02.txt" />
+     <None Include="Assets\Prefabs\General\MapFiles\map01.txt" />
+     <None Include="Assets\Prefabs\General\MapFiles\mapAbel.txt" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Raul Orihuela/Documents/Tareas/ITC/Semestre8/SistemasInteligentes/unitySimpleAgent/sistemasInteligentes_02/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
