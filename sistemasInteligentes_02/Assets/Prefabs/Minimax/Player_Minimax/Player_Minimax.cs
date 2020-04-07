@@ -8,7 +8,11 @@ public class Player_Minimax : MonoBehaviour {
 	public GameObject opponent;
 	public int minimaxDepth;
 
-	[SerializeField]
+	public AudioSource fatality;
+
+	GameObject maxMesh;
+	GameObject minMesh;
+
 	Minimax_State initialState;
 
 	// Use this for initialization
@@ -31,27 +35,46 @@ public class Player_Minimax : MonoBehaviour {
 			initialState = new Minimax_State (this.map, isMaxTurn,opponentPos,myPos);
 	}
 
+	public void showMesh(int child){
+		maxMesh = gameObject.transform.Find ("Max").gameObject;
+		minMesh = gameObject.transform.Find ("Min").gameObject;
+		maxMesh.SetActive (child == 1);
+		minMesh.SetActive (child == 2);
+		gameObject.transform.Find ("Main Camera").gameObject.SetActive (child == 2);
+	}
+
 	public void move(){
 		if (isMaximizer == initialState.isMaxTurn && initialState.posMax != initialState.posMin) {
 			minimax (ref initialState, minimaxDepth, minimaxDepth, float.MinValue, float.MaxValue, isMaximizer);
 			Vector3 movementDirection;
-			if (this.isMaximizer)
+			if (this.isMaximizer) {
 				movementDirection = new Vector3 (
 					initialState.posMax.x - this.transform.position.x,
 					0,
 					initialState.posMax.y - this.transform.position.z
 				);
-			else
+				if (movementDirection.z == -1.0) maxMesh.transform.Rotate (0, 180 - maxMesh.transform.rotation.eulerAngles.y, 0);
+				else if (movementDirection.z == 1.0) maxMesh.transform.Rotate (0, - maxMesh.transform.rotation.eulerAngles.y, 0);
+				else if (movementDirection.x == -1.0) maxMesh.transform.Rotate (0, 270 - maxMesh.transform.rotation.eulerAngles.y, 0);
+				else if (movementDirection.x == 1.0) maxMesh.transform.Rotate (0, 90 - maxMesh.transform.rotation.eulerAngles.y, 0);
+			} else {
 				movementDirection = new Vector3 (
 					initialState.posMin.x - this.transform.position.x,
 					0,
 					initialState.posMin.y - this.transform.position.z
 				);
-
+				if (movementDirection.z == -1.0) minMesh.transform.Rotate (0, 180 - minMesh.transform.rotation.eulerAngles.y, 0);
+				else if (movementDirection.z == 1.0) minMesh.transform.Rotate (0, - minMesh.transform.rotation.eulerAngles.y, 0);
+				else if (movementDirection.x == -1.0) minMesh.transform.Rotate (0, 270 - minMesh.transform.rotation.eulerAngles.y, 0);
+				else if (movementDirection.x == 1.0) minMesh.transform.Rotate (0, 90 - minMesh.transform.rotation.eulerAngles.y, 0);
+			}
 			this.gameObject.transform.Translate (movementDirection);
 			setInitialState (!initialState.isMaxTurn);
 			opponent.GetComponent<Player_Minimax> ().setInitialState (initialState.isMaxTurn);
 			if (initialState.posMax == initialState.posMin) {
+				if (isMaximizer) showMesh (0);
+				else opponent.GetComponent<Player_Minimax> ().showMesh (0);
+				fatality.Play ();
 				Debug.Log ("Game over");
 			}
 		}
@@ -133,14 +156,12 @@ public class Player_Minimax : MonoBehaviour {
 		public bool isMaxTurn;
 		public Vector2 posMax;
 		public Vector2 posMin;
-		public float score;
 
 		public Minimax_State(Map map, bool isMaxTurn, Vector2 posMax, Vector2 posMin){
 			this.map = map;
 			this.isMaxTurn = isMaxTurn;
 			this.posMax = posMax;
 			this.posMin = posMin;
-			this.score = 0.0f;
 		}
 
 		public float calculateHeuristic(){

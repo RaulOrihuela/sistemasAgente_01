@@ -3,7 +3,7 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Prefabs\Minimax\Player_Minimax\Player_Minimax.cs">
     <Files>
       <File FileName="Assets\Prefabs\Minimax\GameManager_Minimax\GameManager_Minimax.cs" Line="11" Column="12" />
-      <File FileName="Assets\Prefabs\Minimax\Player_Minimax\Player_Minimax.cs" Line="16" Column="3" />
+      <File FileName="Assets\Prefabs\Minimax\Player_Minimax\Player_Minimax.cs" Line="11" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

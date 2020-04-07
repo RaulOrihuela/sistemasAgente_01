@@ -53,6 +53,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\FBX\Supercyan Character Pack Free Sample\Scripts\CameraLogic.cs" />
+     <Compile Include="Assets\FBX\Supercyan Character Pack Free Sample\Scripts\Demo.cs" />
+     <Compile Include="Assets\FBX\Supercyan Character Pack Free Sample\Scripts\SimpleCharacterControl.cs" />
      <Compile Include="Assets\Prefabs\Agent\Agent\Agent.cs" />
      <Compile Include="Assets\Prefabs\Agent\SetupManager\SetupManager.cs" />
      <Compile Include="Assets\Prefabs\General\Map\Map.cs" />
@@ -60,6 +63,7 @@
      <Compile Include="Assets\Prefabs\Minimax\GameManager_Minimax\GameManager_Minimax.cs" />
      <Compile Include="Assets\Prefabs\Minimax\Player_Minimax\Player_Minimax.cs" />
      <None Include="Assets\Prefabs\General\MapFiles\map02.txt" />
+     <None Include="Assets\FBX\CartoonBusinessZombie\ReadMe.txt" />
      <None Include="Assets\Prefabs\General\MapFiles\map01.txt" />
      <None Include="Assets\Prefabs\General\MapFiles\mapAbel.txt" />
  <Reference Include="UnityEditor.StandardEvents">

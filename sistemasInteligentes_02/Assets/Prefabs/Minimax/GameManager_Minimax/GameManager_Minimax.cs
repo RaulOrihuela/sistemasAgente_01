@@ -50,6 +50,9 @@ public class GameManager_Minimax : MonoBehaviour {
 
 		maxPlayer_minimax.setInitialState (maxTurn);
 		minPlayer_minimax.setInitialState (maxTurn);
+
+		maxPlayer_minimax.showMesh (1);
+		minPlayer_minimax.showMesh (2);
 	}
 	
 	// Update is called once per frame
